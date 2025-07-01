@@ -18,6 +18,8 @@ class Cadastro_user(models.Model):
     email=models.EmailField(max_length=80, unique=True)
     
     curso=models.CharField(max_length=200)    
+   
+    matricula=models.CharField(max_length=100, unique=True)
     
     def  __str__(self):
         return self.name
