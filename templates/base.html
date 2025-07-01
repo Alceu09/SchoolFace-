@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        {%block content %}
+                      
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
+    .flex-container {
+      display: flex;
+      justify-content: center;      /* Centraliza na horizontal */
+      align-items: center;          /* Centraliza na vertical */
+      background-color: #bbdefb;
+      height: 500px;
+      padding: 15px;
+      gap: 5px;
+    }
+
+    .flex-container > div {
+      background: #ffecb3;
+      border: 3px solid #ffcc80;
+      border-radius: 5px;
+      padding: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="flex-container">
+    <div class="Aluno">Aluno</div>
+    <div class="Gestor">Gestor</div>
+    <div class="Admin">Admin</div>
+  </div>
+
+             
+          {% endblock %}
+        </div>  
+
+    <h1> oi</h1>
+</body>
+</html>
