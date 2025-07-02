@@ -22,23 +22,20 @@ def criar_aluno(request): # View para criar um novo aluno, e verificar se foi en
           form = CadastroUserForm()
     return render(request, 'criar_aluno.html', {'form': form})
   
-  
 def criar_coleta_faces(request, aluno_id):
     aluno = Cadastro_user.objects.get(id=aluno_id)
 
     if request.method == 'POST':
-         form = ColetaFacesForm(request.POST, request.FILES)
-         if form.is_valid():
- # Itera sobre os arquivos enviados e cria uma entrada para cada imagem
-           for image in request.FILES.getlist('images'):
-             Coleta_faces.objects.create(aluno=aluno, image=image)
+        form = ColetaFacesForm(request.POST, request.FILES)
+        if form.is_valid():
+            for image in request.FILES.getlist('images'):
+                Coleta_faces.objects.create(aluno=aluno, image=image)
+            return redirect('alguma_view_final')  # ou outra página após salvar
+    else:
+        form = ColetaFacesForm()
 
-         else:
-
-          form = ColetaFacesForm()
     context = {
- 'funcionario': aluno,
- 'form': form
- }
-
+        'aluno': aluno,
+        'form': form
+    }
     return render(request, 'criar_coleta_faces.html', context)
