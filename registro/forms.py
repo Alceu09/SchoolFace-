@@ -1,5 +1,5 @@
 from django import forms
-from .models import Cadastro_user  # Importe o modelo
+from .models import Cadastro_user# Importe o modelo
 from .models import Coleta_faces  # Importe o modelo para coleta de faces
 class CadastroUserForm(forms.ModelForm):
     class Meta:
