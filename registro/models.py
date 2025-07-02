@@ -22,10 +22,10 @@ class Cadastro_user(models.Model):
     matricula=models.CharField(max_length=100, unique=True)
     
     def  __str__(self):
-        return self.name
+        return self.nome
     
     def save(self, *args, **kwargs):
-        seq=self.name+ '_FUNC'+ str(randint(1000, 9999))
+        seq=self.nome+ '_FUNC'+ str(randint(1000, 9999))
         self.slug=slugify(seq)
         super().save(*args, **kwargs)
         

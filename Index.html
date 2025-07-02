@@ -1,0 +1,207 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+
+<link href="{% static 'css/base.css' %}" rel="stylesheet">
+    {}
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        {%block content %}
+   <!-- From Uiverse.io by m1her --> 
+   
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Face - Sistema de Gestão Escolar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" id="brand-link">
+                <i class="bi bi-mortarboard-fill me-2"></i>
+                <span class="brand-text">School Face</span>
+            </a>
+            
+            <div class="welcome-message d-none d-md-block">
+                <span class="welcome-text">Bem-vindo ao School Face</span>
+            </div>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre">
+                            <i class="bi bi-info-circle me-1"></i>Sobre
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contato">
+                            <i class="bi bi-envelope me-1"></i>Contato
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-light ms-2" id="theme-toggle">
+                            <i class="bi bi-moon-fill" id="theme-icon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Sistema de Gestão Escolar</h1>
+                <p class="hero-subtitle">Escolha seu perfil para acessar o sistema</p>
+                <div class="hero-decoration"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="cards-container">
+                        <!-- Card Aluno -->
+                        <div class="profile-card" data-profile="aluno">
+                            <div class="card-inner">
+                                <div class="card-icon">
+                                    <i class="bi bi-person-graduation"></i>
+                                </div>
+                                <h3 class="card-title">Aluno</h3>
+                                <p class="card-description">Acesso para cadastrar a biometria do aluno</p>
+                                <div class="card-features">
+                                    <span class="feature-tag">Cadastro Biométrico</span>
+                                    <span class="feature-tag">Acesso Rápido</span>
+                                </div>
+                            </div>
+                            <div class="card-overlay">
+                                <button class="btn-access">
+                                    <i class="bi bi-arrow-right-circle"></i>
+                                    Acessar
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Card Gestor -->
+                        <div class="profile-card" data-profile="gestor">
+                            <div class="card-inner">
+                                <div class="card-icon">
+                                    <i class="bi bi-person-tie"></i>
+                                </div>
+                                <h3 class="card-title">Gestor</h3>
+                                <p class="card-description">Área do gestor para controle e monitoramento</p>
+                                <div class="card-features">
+                                    <span class="feature-tag">Relatórios</span>
+                                    <span class="feature-tag">Controle</span>
+                                </div>
+                            </div>
+                            <div class="card-overlay">
+                                <button class="btn-access">
+                                    <i class="bi bi-arrow-right-circle"></i>
+                                    Acessar
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Card Admin -->
+                        <div class="profile-card" data-profile="admin">
+                            <div class="card-inner">
+                                <div class="card-icon">
+                                    <i class="bi bi-gear-fill"></i>
+                                </div>
+                                <h3 class="card-title">Admin</h3>
+                                <p class="card-description">Configurações e administração do sistema</p>
+                                <div class="card-features">
+                                    <span class="feature-tag">Configurações</span>
+                                    <span class="feature-tag">Administração</span>
+                                </div>
+                            </div>
+                            <div class="card-overlay">
+                                <button class="btn-access">
+                                    <i class="bi bi-arrow-right-circle"></i>
+                                    Acessar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2024 School Face. Todos os direitos reservados.</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <p>Sistema de Gestão Escolar Inteligente</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+            <p>Carregando...</p>
+        </div>
+    </div>
+ <script src="{% static 'main.js' %}">
+    
+ </script>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+   
+</body>
+</html>
+
+
+
+
+    <!-- Scripts -->
+
+   
+    
+    
+    
+    
+    <style>
+           
+
+    
+     
+     </style>
+     
+   
+      
+
+          {% endblock %}
+        </div>  
+
+    <h1> oi</h1>
+</body>
+</html>

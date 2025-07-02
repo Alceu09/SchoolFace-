@@ -1,10 +1,10 @@
 from django import forms
 from .models import Cadastro_user  # Importe o modelo
 from .models import Coleta_faces  # Importe o modelo para coleta de faces
-class CadastroUserForm(forms.Form):
+class CadastroUserForm(forms.ModelForm):
     class Meta:
         model = Cadastro_user
-        fields = ['nome', 'email', 'senha', 'matricula']
+        fields = ['nome', 'email', 'foto', 'matricula']
     
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

@@ -23,3 +23,9 @@ urlpatterns = [
     
     
 ]
+
+from django.urls import path
+from registro.views import criar_aluno, criar_coleta_faces
+urlpatterns = [
+ path('', criar_aluno, name='criar_aluno'),
+ path('criar_coleta_faces/<int:aluno_id>', criar_coleta_faces, name='criar_coleta_faces'),]

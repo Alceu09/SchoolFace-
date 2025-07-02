@@ -119,11 +119,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),  
+]
+
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
@@ -131,3 +136,17 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# settings.py
+
+# ... todo o seu código original termina aqui ...
+
+# DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# ADICIONE AS LINHAS ABAIXO NO FINAL DO ARQUIVO
+print("================== DEBUGANDO CAMINHOS ==================")
+import os
+print(f"O BASE_DIR do meu projeto é: {BASE_DIR}")
+print(f"O Django está procurando por estáticos em: {os.path.join(BASE_DIR, 'static')}")
+print("========================================================")
